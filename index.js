@@ -224,3 +224,48 @@
 
 
 
+
+
+// String Query Methods
+// let str = "Hello, World!";
+// console.log(str.at(7)); // "W"
+// console.log(str.charAt(7)); // "W"
+// console.log(str.charCodeAt(7)); // 87 (ASCII code of 'W')
+// console.log(str.codePointAt(7)); // 87 (same as charCodeAt)
+
+// // String Search Methods
+// console.log(str.indexOf("o")); // 4 (first 'o' position)
+// console.log(str.lastIndexOf("o")); // 8 (last 'o' position)
+// console.log(str.startsWith("Hello")); // true
+// console.log(str.endsWith("!")); // true
+// console.log(str.includes("World")); // true
+// console.log(str.match(/[A-Z]/g)); // ["H", "W"] (matches uppercase letters)
+// console.log([...str.matchAll(/[o]/g)]); // Array of match objects
+// console.log(str.search("World")); // 7 (index of first match)
+
+// // String Composition Methods
+// console.log("5".padStart(3, "0")); // "005"
+// console.log("5".padEnd(3, "0")); // "500"
+// console.log("Hello".concat(", ", "World!")); // "Hello, World!"
+// console.log("Ha".repeat(3)); // "HaHaHa"
+
+// // String Decomposition Methods
+// console.log(str.split(", ")); // ["Hello", "World!"]
+// console.log(str.slice(7, 12)); // "World"
+// console.log(str.substring(7, 12)); // "World"
+// console.log(str.substr(7, 5)); // "World" (deprecated)
+// console.log("   Trim me!   ".trim()); // "Trim me!"
+// console.log("   Trim me!   ".trimStart()); // "Trim me!   "
+// console.log("   Trim me!   ".trimEnd()); // "   Trim me!"
+
+// // String Transformation Methods
+// console.log("TeST".toLowerCase()); // "test"
+// console.log("TeST".toUpperCase()); // "TEST"
+// console.log("İstanbul".toLocaleLowerCase("tr")); // "istanbul"
+// console.log("istanbul".toLocaleUpperCase("tr")); // "İSTANBUL"
+// console.log("café".normalize()); // "café" (normalizes Unicode)
+// console.log("hello".toWellFormed()); // "hello" (ensures valid Unicode)
+
+
+
+
