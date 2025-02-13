@@ -149,6 +149,7 @@
 // // Number Methods
 // console.log("Number.parseFloat('3.14'):", Number.parseFloat("3.14")); // Convert string to float
 // console.log("Number.parseInt('42'):", Number.parseInt("42")); // Convert string to integer
+// console.log(Number.parseInt("abc42")) //output: NaN
 // console.log("Number.isFinite(100):", Number.isFinite(100)); // Check if finite
 // console.log("Number.isInteger(5.6):", Number.isInteger(5.6)); // Check if integer
 // console.log("Number.isNaN(NaN):", Number.isNaN(NaN)); // Check if NaN
@@ -187,7 +188,7 @@
 
 // console.log("\n=== Exponential & Logarithmic Functions ===");
 // console.log(Math.pow(2, 3)); // 8
-// console.log(Math.exp(1)); // 2.718281828459045
+// console.log(Math.exp(1)); // 2.718281828459045     Math.exp(x) - 1 == Math.expm1(x)
 // console.log(Math.expm1(1)); // 1.718281828459045
 // console.log(Math.log(10)); // 2.302585092994046
 // console.log(Math.log10(100)); // 2
@@ -195,14 +196,14 @@
 // console.log(Math.log2(8)); // 3
 
 // console.log("\n=== Rounding Functions ===");
-// console.log(Math.floor(4.9)); // 4
+// console.log(Math.floor(-4.9999)); // 5
 // console.log(Math.ceil(4.1)); // 5
 // console.log(Math.round(4.5)); // 5
-// console.log(Math.fround(1.337)); // 1.3370000123977661
-// console.log(Math.trunc(4.9)); // 4
+// console.log(Math.fround(1.337)); // 1.3370000123977661 shows nearest 32 bit single representation
+// console.log(Math.trunc(-4.44)); // -4
 
 // console.log("\n=== Min & Max Functions ===");
-// console.log(Math.min(1, 3, -5, 7)); // -5
+// console.log(Math.min(1, 3, -5, 7)); // -5      
 // console.log(Math.max(1, 3, -5, 7)); // 7
 
 // console.log("\n=== Random Function ===");
@@ -219,7 +220,7 @@
 // console.log(Math.sign(10)); // 1
 
 // console.log("\n=== Bitwise & Integer Operations ===");
-// console.log(Math.clz32(1)); // 31 (leading zeros in 32-bit representation)
+// console.log(Math.clz32(5)); // 31 (leading zeros in 32-bit representation)
 // console.log(Math.imul(2, 3)); // 6 (32-bit multiplication)
 
 
@@ -244,7 +245,7 @@
 // console.log(str.search("World")); // 7 (index of first match)
 
 // // String Composition Methods
-// console.log("5".padStart(3, "0")); // "005"
+console.log("59".padStart(3, "00")); // "059"
 // console.log("5".padEnd(3, "0")); // "500"
 // console.log("Hello".concat(", ", "World!")); // "Hello, World!"
 // console.log("Ha".repeat(3)); // "HaHaHa"
