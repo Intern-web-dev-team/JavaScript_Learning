@@ -224,3 +224,132 @@ JavaScript provides extensive mathematical operations through the Math object:
 - slice(): Extracts part of string
 - substring(): Extracts characters between two points
 - substr(): Extracts specified number of characters
+
+# Array Methods
+
+JavaScript provides numerous built-in methods for array manipulation. Here are the most commonly used array methods:
+
+## Adding and Removing Elements
+1. push(): Adds elements to the end of array
+```javascript
+const arr = [1, 2, 3];
+arr.push(4); // Result: [1, 2, 3, 4]
+```
+
+2. pop(): Removes the last element
+```javascript
+arr.pop(); // Removes last element and returns it
+```
+
+3. shift(): Removes the first element
+```javascript
+arr.shift(); // Removes first element and returns it
+```
+
+4. unshift(): Adds elements to the beginning
+```javascript
+arr.unshift(0); // Result: [0, 1, 2, 3]
+```
+
+## Array Transformation
+1. concat(): Combines two or more arrays
+```javascript
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = arr1.concat(arr2); // [1, 2, 3, 4]
+```
+
+2. slice(): Extracts part of an array
+```javascript
+const arr = [1, 2, 3, 4, 5];
+const part = arr.slice(1, 3); // [2, 3]
+```
+
+3. splice(): Modifies array by adding/removing elements
+```javascript
+const arr = [1, 2, 3, 4];
+arr.splice(2, 1, 10); // Removes 1 element at index 2 and adds 10
+```
+
+## Searching and Verification
+1. indexOf(): Finds index of an element
+```javascript
+arr.indexOf(3); // Returns index of 3 or -1 if not found
+```
+
+2. includes(): Checks if element exists
+```javascript
+arr.includes(2); // Returns true/false
+```
+
+3. find(): Returns first element that matches condition
+```javascript
+arr.find(num => num > 3); // Returns first number > 3
+```
+
+4. findIndex(): Returns index of first matching element
+```javascript
+arr.findIndex(num => num > 3); // Returns index of first number > 3
+```
+
+## Array Processing
+1. filter(): Creates new array with elements that pass test
+```javascript
+const evenNumbers = arr.filter(num => num % 2 === 0);
+```
+
+2. map(): Creates new array by transforming each element
+```javascript
+const doubled = arr.map(num => num * 2);
+```
+
+3. reduce(): Reduces array to single value
+```javascript
+const sum = arr.reduce((acc, num) => acc + num, 0);
+```
+
+## Array Testing
+1. every(): Checks if all elements pass test
+```javascript
+arr.every(num => num < 10); // Returns true if all elements < 10
+```
+
+2. some(): Checks if any element passes test
+```javascript
+arr.some(num => num > 3); // Returns true if any element > 3
+```
+
+## Array Ordering
+1. sort(): Sorts the array (modifies original)
+```javascript
+arr.sort((a, b) => a - b); // Numeric sort ascending
+```
+
+2. reverse(): Reverses array order
+```javascript
+arr.reverse(); // Reverses array in place
+```
+
+## Array Conversion
+1. join(): Converts array to string
+```javascript
+arr.join("-"); // Joins elements with specified separator
+```
+
+2. split(): Converts string to array (string method)
+```javascript
+"1-2-3".split("-"); // Creates array from string
+```
+
+## Iteration
+forEach(): Executes function for each element
+```javascript
+arr.forEach(num => console.log(num));
+```
+
+Important Notes:
+- Some methods modify the original array (push, pop, shift, unshift, splice, sort, reverse)
+- Others return a new array (concat, slice, filter, map)
+- When using sort() with numbers, always provide a comparison function
+- reduce() is powerful for calculating totals or transforming arrays into other data structures
+- Methods like map(), filter(), and reduce() are commonly used in functional programming
