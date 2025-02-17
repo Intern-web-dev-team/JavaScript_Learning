@@ -58,13 +58,13 @@
 // // }
 // // console.log(numbers);
 
-
+// greet("vishweshwar");
 // //functions
 // //function declaration(named function)
-// // function greet(name){
-// //   console.log(`hello ${name}`);
-// // }
-// // greet("vishweshwar");
+// function greet(name){
+//   console.log(`hello ${name}`);
+// }
+
 
 // //function expression(Anonymous function)
 // // const greet = function(name){
@@ -78,8 +78,8 @@
 // // }
 // // console.log(greet('vissu'))
 
-// // const greet = (name) => `hello ${name}`
-// // console.log(greet('vissu'))
+// const greet = (name) => `hello ${name}`;
+// console.log(greet('vissu'));
 
 // // const add = (a,b) => a+b
 // // console.log(add(29,3))
@@ -115,12 +115,13 @@
 // // }
 // // const add = (a,b) => a+b;
 // // console.log(operate(2,8,add));
+// operate()()
 
 // //map function
 // // syntax: const newArray = oldArray.map(callbackfunction);
 
 // // const oldArray = ['vishwesh', 'vignesh', 'karthick'];
-// // const newArray = oldArray.map(name => name.toUpperCase());
+// // const newArray = oldArray.map((name,i) => name.toUpperCase());
 // // console.log(newArray);
 
 
@@ -149,12 +150,13 @@
 // // // Number Methods
 // // console.log("Number.parseFloat('3.14'):", Number.parseFloat("3.14")); // Convert string to float
 // // console.log("Number.parseInt('42'):", Number.parseInt("42.888")); // Convert string to integer
-// // console.log(Number.parseInt("abc42")) //output: NaN
+// // console.log(Number.parseInt("12abc42")) //output: NaN
 // // console.log("Number.isFinite(100):", Number.isFinite(100)); // Check if finite
 // // console.log("Number.isInteger(5.6):", Number.isInteger(5.6)); // Check if integer
-// // console.log(Number.isNaN('helo')); // Check if NaN
+// console.log(isNaN(0)); // Check if NaN
 // // console.log("Number.isSafeInteger(9007199254740991):", Number.isSafeInteger(9007199254740991)); // Check if safe integer
 
+// console.log(0 == false)
 
 // // // Number Prototype Methods
 // // let num = 1234.46489;
@@ -270,13 +272,16 @@
 // // console.log("hello".toWellFormed()); // "hello" (ensures valid Unicode)
 
 
-// /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // // // Arrays
 
 // // Creating an array
 
-// // const arr = [1, 2, 3, 4, 5];
+
+// const arr = [1, 2, 3, 4, 5];
+// const newArr = [...arr];
+// console.log(typeof arr)
 // // let temp = [ ];
 // // // console.log(arr[3]); // 4
 // // arr.push(5);
@@ -409,6 +414,8 @@
 
 // // 8. indexOf() - Finds index of an element
 // console.log("indexOf 3:", arr.indexOf(3));
+// const names = ["vignesh", "vishwesh", "karthick", "vishwesh", "vishwesh"];
+// console.log(names.indexOf("vishwesh"));
 
 // // 9. includes() - Checks if element exists
 // console.log("includes 2:", arr.includes(2));
@@ -429,10 +436,10 @@
 // console.log("reduce sum:", arr.reduce((acc, num) => acc + num, 0));
 
 // // 15. every() - Checks if all elements match condition
-// console.log("every <10:", arr.every(num => num < 10));
+// console.log("every <10:", arr.every(num => num < 10)); (return type is boolean)
 
 // // 16. some() - Checks if any element matches condition
-// console.log("some >3:", arr.some(num => num > 3));
+// console.log("some >3:", arr.some(num => num > 3)); // true (return type is boolean)
 
 // // 17. sort() - Sorts array (modifies original)
 // const sortedArr = [...arr].sort((a, b) => a - b);
@@ -449,4 +456,60 @@
 
 // // 21. forEach() - Iterates over elements
 // arr.forEach(num => console.log("forEach:", num));
+
+// let arr1 = [1, 2, 3, 4, 5];
+// arr1.copyWithin(3, 3, 4);
+// console.log(arr1); // [1, 2, 3, 4, 5]
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// // // Objects
+
+// // Creating an object
+
+// const alien = {
+//   name: 'Vishwesh',
+//   age: 23,
+//   role: 'fsd',
+//   company: "remitbee",
+//   greet: function () {
+//     console.log(`hello ${this.name} and his weight is ${this.weight}`);
+//   }
+// }
+// // console.log(alien);
+
+// // creating prototype
+// const human = {
+//     weight : 60,
+// }
+// // console.log(human.weight);
+
+// human.__proto__ = alien;
+
+// human.greet();
+
+//////////////////////////////////////
+
+//creating object using classes
+
+class toyotaCar{
+    start(){
+        console.log('car started');
+    }
+    stop(){
+        console.log('car stopped');
+    }
+    setBrand(brand){
+        this.carBrand = brand;
+    }
+}
+
+let fortuner = new toyotaCar();
+fortuner.start();
+fortuner.stop();
+fortuner.setBrand('fortuner');
+console.log(fortuner.carBrand);
+
 
